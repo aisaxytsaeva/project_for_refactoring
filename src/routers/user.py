@@ -63,7 +63,6 @@ async def get_current_user(
     user: User = Depends(get_user),
     db: Session = Depends(get_database)
 ) -> UserMe:
-    """Get current user profile"""
     return UserService.get_user_me(user)
 
 @router.patch(
